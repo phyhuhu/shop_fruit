@@ -1,0 +1,34 @@
+{% extends "fruit/base.html" %}
+
+{% block content %}
+<div class="content-section">
+    <h4>Finished Tasks</h4>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Fruit</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Result</th>
+            <th scope="col">Time Taken</th>
+            <th scope="col">success</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for task in tables %}
+            <tr>
+                <td>{{ task.name }}</td>
+                <td>{{ task.kwargs.fruit }}</td>
+                <td>{{ task.kwargs.quantity }}</td>
+                <td>{{ task.result }}</td>
+                <td>{{ task.time_taken }}</td>
+                <td>{{ task.success }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+
+</div>
+{% endblock content %}
+
