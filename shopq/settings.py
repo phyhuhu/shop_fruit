@@ -50,7 +50,6 @@ CACHES = {
 # Application definition
 
 INSTALLED_APPS = [
-    'django_tables2',
     'django_q',
     'crispy_forms',
     'fruit.apps.FruitConfig',
